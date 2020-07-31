@@ -1,6 +1,6 @@
-# bmicalculator
+# BMI Calculator
 
-A new Flutter application.
+Simple BMI Calculator inspired from Dribble Designs and made using Flutter framework.
 
 ## Getting Started
 
