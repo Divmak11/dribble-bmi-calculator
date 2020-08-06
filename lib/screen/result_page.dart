@@ -12,7 +12,7 @@ class ResultPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double result = bmi.calculateBMI();
-    if(result == null)
+    if(result == double.infinity)
       result = 0;
     if(result < 18.5 && result>0)
       {

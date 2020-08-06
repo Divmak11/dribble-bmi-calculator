@@ -2,10 +2,14 @@ import 'package:bmicalculator/logic/bmi_logic.dart';
 import 'package:bmicalculator/screen/result_page.dart';
 import 'package:bmicalculator/screen/selection_page.dart';
 import 'package:bmicalculator/size_config.dart';
+import 'package:bmicalculator/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
 
 class SelectorPage extends StatefulWidget {
+
+  AsyncSnapshot data;
+  SelectorPage(this.data);
   @override
   _SelectorPageState createState() => _SelectorPageState();
 }
@@ -42,13 +46,9 @@ class _SelectorPageState extends State<SelectorPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        drawer: SideDrawer(widget.data),
         appBar: AppBar(
           elevation: 20,
-          leading: IconButton(icon: Icon(
-            Icons.menu,
-            color: Colors.white,
-            size: 45,
-          ), onPressed: () {}),
           title: Text('BMI Calculator',
             style: TextStyle(
               color: Colors.white,
